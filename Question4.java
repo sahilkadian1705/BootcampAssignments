@@ -1,7 +1,5 @@
 import java.util.Scanner;
-import java.util.Arrays;
-import java.util.*;
-public class Array {
+public class Question4 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int arr[][]={{1,2,3,4},

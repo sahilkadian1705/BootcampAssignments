@@ -1,11 +1,11 @@
 import java.util.Scanner;
-public class Main {
+public class Question3 {
     public static void area(int r){
         int area=(22*r*r)/7;
         System.out.println(area);
     }
     public static void circumference(int r){
-        int ans=2*22*r/7;
+        int ans=(2*22*r)/7;
         System.out.println(ans);
     }
     public static void main(String[] args) {
