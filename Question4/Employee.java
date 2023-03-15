@@ -16,24 +16,12 @@ public class Employee{
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public String getDesignation() {
         return designation;
-    }
-
-    public void setDesignation(String designation) {
-        this.designation = designation;
     }
 
     @Override
@@ -42,5 +30,19 @@ public class Employee{
                 "Name = " + name +
                 " , Age = " + age +
                 " , Designation = " + designation;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, designation, age);
+    }
+    @Override
+    public boolean equals(Object o){
+        if(this==o)return true;
+        if(o==null || getClass()!=o.getClass()) return  false;
+        Employee emp=(Employee) o;
+        if(age!=emp.age)return false;
+        if(name!=null ? !name.equals(emp.name):emp.name!=null)return false;
+        if(age!=0 ? age!=(emp.age):emp.age!=0)return false;
+        return designation!=null ?designation.equals(emp.designation):emp.designation==null;
     }
 }
