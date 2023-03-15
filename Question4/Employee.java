@@ -36,13 +36,8 @@ public class Employee{
         return Objects.hash(name, designation, age);
     }
     @Override
-    public boolean equals(Object o){
-        if(this==o)return true;
-        if(o==null || getClass()!=o.getClass()) return  false;
-        Employee emp=(Employee) o;
-        if(age!=emp.age)return false;
-        if(name!=null ? !name.equals(emp.name):emp.name!=null)return false;
-        if(age!=0 ? age!=(emp.age):emp.age!=0)return false;
-        return designation!=null ?designation.equals(emp.designation):emp.designation==null;
+    public boolean equals(Object obj){
+        Employee emp = (Employee) obj;
+        return emp.name.equals(this.name) && emp.age == this.age && emp.designation.equals(this.designation);
     }
 }
