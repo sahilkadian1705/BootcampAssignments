@@ -11,8 +11,8 @@ public class UserDAO{
     private List<User> userList=new ArrayList<>();
 
 //    Add User
-    public void addUser(User user){
-        userList.add(user);
+    public void addUser(UserTo user){
+        userList.add(new User(user.getId(),user.getName(), user.getDesignation(), user.getPassword()));
     }
 //    Get All Users
     public List<User> getUserList(){

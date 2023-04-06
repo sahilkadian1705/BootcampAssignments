@@ -40,7 +40,7 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    public void addUser(@RequestBody User user){
+    public void addUser(@RequestBody UserTo user){
         userDAO.addUser(user);
     }
 
